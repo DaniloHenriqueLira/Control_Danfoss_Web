@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- AWP_In_Variable Name='"date".in' -->
+    <!-- AWP_In_Variable Name='"date".corrente' -->
+    <!-- AWP_In_Variable Name='"date".frequencia' -->
+    <!-- AWP_In_Variable Name='"date".start' -->
+    <!-- AWP_In_Variable Name='"date".reset' -->
+    <!-- AWP_In_Variable Name='"date".reversao' -->
+    <!-- AWP_In_Variable Name='"date".jog' -->
+    <meta charset="UTF-8">
+    <title>Controle do Motor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <!-- Conteúdo da barra superior -->
+        <h1>Controle do Motor</h1>
+    </div>
+
+    <div class="container">
+        <!-- Adicione os campos de corrente, frequência e imagem -->
+        <div class="motor-info">
+            <div class="corrente-container">
+                Corrente: <span class="corrente" id="correnteValue">:="date".corrente:</span>
+            </div>
+    
+            <!-- Div para frequência -->
+            <div class="frequencia-container">
+                Frequência: <span class="frequencia" id="frequenciaValue">:="date".frequencia:</span>
+            </div>
+
+               <!-- Campo de entrada para RPM -->
+               <div class="rpm-input">
+                <label for="rpmInput">RPM desejado:</label>
+                <form id="rpmInput">
+                    <input type="number" name='"date".in' id="rpmValue" value=':="date".in:' />
+                </form>
+            </div>
+
+            <div class="img-container">
+                <img src="img/motor-eletrico.png" alt="Motor Image">
+            </div>
+        </div>
+
+        <!-- Adicione os botões -->
+        <div class="button-form">
+            <form id="startForm">
+                <p>
+                    <input type="button" class="startButton" value="Start" onclick="toggleValue('start')">
+                    <input type="hidden" name='"date".start' value="0" id="startValue">
+                </p>
+            </form>
+
+            <form id="resetForm">
+                <p>
+                    <input type="button" class="resetButton" value="Reset" onclick="toggleValue('reset')">
+                    <input type="hidden" name='"date".reset' value="0" id="resetValue">
+                </p>
+            </form>
+
+            <form id="reversaoForm">
+                <p>
+                    <input type="button" class="reversaoButton" value="Reversão" onclick="toggleValue('reversao')">
+                    <input type="hidden" name='"date".reversao' value="0" id="reservaoValue">
+                </p>
+            </form>
+
+            <form id="jogForm">
+                <p>
+                    <input type="button" class="jogButton" value="Jog" onclick="toggleValue('jog')">
+                    <input type="hidden" name='"date".jog' value="0" id="jogValue">
+                </p>
+            </form>
+        </div>
+
+        <!-- Retângulo de fundo -->
+        <div class="background-rect"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

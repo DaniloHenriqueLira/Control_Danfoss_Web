@@ -1,0 +1,130 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rpm-input,
+.corrente-container,
+.frequencia-container {
+    text-align: center;
+    margin-top: 20px; /* Espaço entre as seções */
+}
+
+.rpm-input label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.rpm-input input {
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.button-form {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row; /* Alterado para row para posicionar lado a lado */
+}
+
+.button-form form {
+    margin: 10px;
+}
+
+/* Adicione estilos para o botão Start */
+.startButton {
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #808080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.startButton:hover {
+    opacity: 0.8;
+}
+
+/* Adicione estilos para os botões ativos */
+.startButton.active,
+.resetButton.active,
+.reversaoButton.active,
+.jogButton.active {
+    background-color: green; /* Cor quando o botão está ativo (valor 1) */
+}
+
+
+/* Estilos para outros botões */
+.resetButton,
+.reversaoButton,
+.jogButton {
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #808080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.resetButton:hover,
+.reversaoButton:hover,
+.jogButton:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para o retângulo de fundo */
+.background-rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+/* Adicione estilos para a imagem */
+.motor-container {
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.img-container img {
+    width: 400px;
+    filter: grayscale(100%);
+}
+
+/* Estilos específicos para corrente, frequência e RPM desejado */
+.corrente-container,
+.frequencia-container,
+.rpm-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Espaço entre as seções */
+}
