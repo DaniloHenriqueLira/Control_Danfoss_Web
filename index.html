@@ -2,6 +2,9 @@
 <html lang="pt">
 
 <head>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- AWP_In_Variable Name='"date".in' -->
     <!-- AWP_In_Variable Name='"date".corrente' -->
     <!-- AWP_In_Variable Name='"date".frequencia' -->
@@ -16,24 +19,19 @@
 
 <body>
     <div class="top-bar">
-        <!-- Conteúdo da barra superior -->
+        
         <h1>Controle do Motor</h1>
     </div>
 
     <div class="container">
-        <!-- Adicione os campos de corrente, frequência e imagem -->
+        
         <div class="motor-info">
             <div class="corrente-container">
-                Corrente: <span class="corrente" id="correnteValue">:="date".corrente:</span>
-            </div>
-    
-            <!-- Div para frequência -->
-            <div class="frequencia-container">
-                Frequência: <span class="frequencia" id="frequenciaValue">:="date".frequencia:</span>
+               
+                <canvas id="correnteChart" width="400" height="200"></canvas>
             </div>
 
-               <!-- Campo de entrada para RPM -->
-               <div class="rpm-input">
+            <div class="rpm-input">
                 <label for="rpmInput">RPM desejado:</label>
                 <form id="rpmInput">
                     <input type="number" name='"date".in' id="rpmValue" value=':="date".in:' />
@@ -45,7 +43,7 @@
             </div>
         </div>
 
-        <!-- Adicione os botões -->
+        
         <div class="button-form">
             <form id="startForm">
                 <p>
@@ -76,12 +74,14 @@
             </form>
         </div>
 
-        <!-- Retângulo de fundo -->
+        
         <div class="background-rect"></div>
     </div>
 
+   
     <script src="js/script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/grafico.js"></script>
 </body>
 
 </html>
