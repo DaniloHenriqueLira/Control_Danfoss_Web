@@ -16,7 +16,7 @@ function updateURL(inputName, inputValue) {
     window.history.replaceState({}, document.title, newUrl);
 }
 
-// Associar a função a cada botão
+
 document.querySelector('.startButton').addEventListener('click', function() {
     toggleValue('start');
 });
@@ -35,21 +35,14 @@ document.querySelector('.jogButton').addEventListener('click', function() {
 
 
 
-   // Função para obter e definir os valores de corrente e frequência
-   function updateCorrenteFrequencia() {
-    // Substitua pelas lógicas reais para obter os valores de corrente e frequência
-    var correnteReal = date.corrente; // Substitua pela sua variável real
-    var frequenciaReal = date.frequencia; // Substitua pela sua variável real
+function updateCorrenteFrequencia() {
+    var correnteReal = (Math.random() * 2.0).toFixed(2);
+    var frequenciaReal = (Math.random() * 60 + 40).toFixed(2); 
 
-    // Atualize os elementos no HTML
-    document.getElementById('correnteValue').textContent = correnteReal;
-    document.getElementById('frequenciaValue').textContent = frequenciaReal;
+    document.getElementById('correnteValue').textContent = correnteReal + " A";
+    document.getElementById('frequenciaValue').textContent = frequenciaReal + " Hz";
 }
 
-// Atualize os valores a cada segundo
 setInterval(updateCorrenteFrequencia, 1000);
-
-
-
 
 
